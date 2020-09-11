@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title> index page</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="welcome">
+<h2>Hi, You are very welcome to our app!</h2>
+
+<button onclick="document.getElementById('idlogin').style.display='block'" style="width:auto;">Login</button>
+<h4> Click here to login </h4>
+</div>
+<div id="idlogin" class="login">
+
+  <form class="modal-content animate" action="homepage.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('idlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <h3> Welcome to the Login Page </h3>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter your Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter your Password" name="psw" required>
+
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('idlogin').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Not a Member?<a href="#"> Sign up</a></span>
+    </div>
+  </form>
+</div>
+
+<script src='home.js'>
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Health Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scaleable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body class="card">
+
+<div class="logo">
+<a href="homepage.html"><Img src="logo.png" alt="healthtracker"></a>
+</div>
+<div class="healthm">
+
+
+  <center><h2>My Health Statistics</h2></center>
+  <br>
+  <br>
+  <form action="/action_page.php">
+  Work:
+  <input id="worktime"type="time" name="user_time" value=""/>
+  <label>End Time</label>
+  <input id="workendtime" type="time" name="user_time" value="" class="end"/> &nbsp &nbsp &nbsp
+  <input id="workdifference" class="calculate" type="text" value=""/>
+  <button id="cal_work">Calculate</button>
+  <br>
+  Exercise:
+  <input id="exercisetime" type="time" name="user_time" value="" />
+  <label>End Time</label>
+  <input id="exerciseendtime" type="time" name="user_time" value="" class="end"/>
+  <input id="exercisedifference"  class="calculate" type="text" value=""/>
+  <button id="cal_exercise">Calculate</button>
+  <br>
+  Study:
+  <input id= "studytime" type="time" name="user_time" value=""/>
+  <label>End Time</label>
+  <input id="studyendtime" type="time" name="user_time" value="" class="end"/>&nbsp&nbsp&nbsp &nbsp
+  <input id="studydifference" class="calculate" type="text" value=""/>
+  <button id="cal_study">Calculate</button>
+  <br>
+  Leisure:
+  <input id= "extratime" type="time" name="user_time" value=""/>
+  <label>End Time</label>
+  <input id="extraendtime" type="time" name="user_time" value="" class="end"/>&nbsp&nbsp
+  <input id="extradifference" class="calculate" type="text" value=""/>
+  <button id="cal_extra">Calculate</button>
+</form>
+<p>
+
+  <div class="faqpage1">
+  <a href="statistic.html">Check your statistics</a>
+  </div>
+<div class="faqpage">
+<a href="faq.html">FAQ</a>
+</div>
+
+</p>
+</div>
+
+<div class="nav_sys">
+  <a href="homepage.html"><span class="glyphicon glyphicon-home"></span><br>Home</a>
+  <a href="scheduler.html"><span class="glyphicon glyphicon-time"></span><br>Scheduler</a>
+  <a href="tracker.html"><span class="glyphicon glyphicon-fire"></span><br>Tracker</a>
+  <a href="health.html"><span class="glyphicon glyphicon-heart"></span><br>Health</a>
+</div>
+
+  </body>
+
+
+</html>
+
+<script src="home.js">
+
+</script>
+
+<script>
+var cal_work = document.querySelector("#cal_work");
+cal_work.addEventListener('click',function(event){
+  event.preventDefault();
+var worktime=document.getElementById("worktime");
+var workendtime=document.getElementById("workendtime");
+var workdifference= document.getElementById("workdifference");
+splitStartTime = worktime.value.split(":");
+splitEndTime= workendtime.value.split(":");
+var h;
+var m;
+if(splitStartTime[1]>splitEndTime[1]){
+   var hr=splitEndTime[0]-1;
+   //console.log(hr);
+   var min=parseInt(splitEndTime[1])+60;
+   //console.log(min);
+  h = hr-splitStartTime[0];
+  m = min-splitStartTime[1];
+}else{
+  h = splitEndTime[0]-splitStartTime[0];
+  m = splitEndTime[1]-splitStartTime[1];
+}
+var result = h +":"+ m;
+workdifference.value=result;
+sessionStorage.setItem('timetowork', h);
+});
+
+//script for calculation of total exercise time
+var cal_exercise = document.querySelector("#cal_exercise");
+cal_exercise.addEventListener('click',function(event){
+  event.preventDefault();
+var exercisetime=document.getElementById("exercisetime");
+var exerciseendtime=document.getElementById("exerciseendtime");
+var exercisedifference= document.getElementById("exercisedifference");
+splitStartTime = exercisetime.value.split(":");
+splitEndTime= exerciseendtime.value.split(":");
+var h;
+var m;
+if(splitStartTime[1]>splitEndTime[1]){
+   var hr=splitEndTime[0]-1;
+   //console.log(hr);
+   var min=parseInt(splitEndTime[1])+60;
+   //console.log(min);
+  h = hr-splitStartTime[0];
+  m = min-splitStartTime[1];
+}else{
+  h = splitEndTime[0]-splitStartTime[0];
+  m = splitEndTime[1]-splitStartTime[1];
+}
+var result = h +":"+ m;
+exercisedifference.value=result;
+sessionStorage.setItem('timetoexercise', h);
+});
+
+
+
+//script for calculation of total study time
+var cal_study = document.querySelector("#cal_study");
+cal_study.addEventListener('click',function(event){
+  event.preventDefault();
+var studytime=document.getElementById("studytime");
+var studyendtime=document.getElementById("studyendtime");
+var studydifference= document.getElementById("studydifference");
+splitStartTime = studytime.value.split(":");
+splitEndTime= studyendtime.value.split(":");
+var h;
+var m;
+if(splitStartTime[1]>splitEndTime[1]){
+   var hr=splitEndTime[0]-1;
+   //console.log(hr);
+   var min=parseInt(splitEndTime[1])+60;
+   //console.log(min);
+  h = hr-splitStartTime[0];
+  m = min-splitStartTime[1];
+}else{
+  h = splitEndTime[0]-splitStartTime[0];
+  m = splitEndTime[1]-splitStartTime[1];
+}
+var result = h +":"+ m;
+studydifference.value=result;
+sessionStorage.setItem('timetostudy', h);
+});
+
+//script for calculation of total extra time
+var cal_extra = document.querySelector("#cal_extra");
+cal_extra.addEventListener('click',function(event){
+  event.preventDefault();
+var extratime=document.getElementById("extratime");
+var extraendtime=document.getElementById("extraendtime");
+var extradifference= document.getElementById("extradifference");
+splitStartTime = extratime.value.split(":");
+splitEndTime= extraendtime.value.split(":");
+var h;
+var m;
+if(splitStartTime[1]>splitEndTime[1]){
+   var hr=splitEndTime[0]-1;
+   //console.log(hr);
+   var min=parseInt(splitEndTime[1])+60;
+   //console.log(min);
+  h = hr-splitStartTime[0];
+  m = min-splitStartTime[1];
+}else{
+  h = splitEndTime[0]-splitStartTime[0];
+  m = splitEndTime[1]-splitStartTime[1];
+}
+
+var result = h +":"+ m;
+extradifference.value=result;
+sessionStorage.setItem('extra_hour', h);
+});
+</script>

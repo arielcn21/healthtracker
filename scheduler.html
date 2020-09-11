@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Scheduler Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scaleable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+  <body style="background-color:#eee;">
+
+<div class="logo">
+<a href="homepage.html"><Img src="logo.png"></a>
+</div>
+
+<div class="pagesection">
+
+  <center><h1>Enter Your Schedule</h1></center>
+
+  <table class="maintable" id="table">
+    <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Activity</th>
+    </tr>
+    <tr>
+        <td> Monday </td>
+        <td type="time">08:00</td>
+        <td>Working</td>
+    </tr>
+    <tr>
+        <td> Monday </td>
+        <td type="time">13:00</td>
+        <td>Lunch Appointment</td>
+    </tr>
+    <tr>
+        <td> Monday </td>
+        <td type="time">17:00</td>
+        <td>Going to Gym</td>
+    </tr>
+  </table>
+
+  <div class="inputtable">
+    Day : <input type="text" name="day" id="day">
+    Time :<input type="time" name="time" id="time" />
+    Activity :<input type="text" name="activity" id="activity">
+    <button onclick="addRow();">Add</button>
+    <button onclick="deleteRow();">Delete</button>
+    <button onclick="editRow();">Edit</button>
+  </div>
+
+  <div class="faqpage">
+  <a href="faq.html">FAQ</a>
+  </div>
+
+</div>
+
+<div class="nav_sys">
+  <a href="homepage.html"><span class="glyphicon glyphicon-home"></span><br>Home</a>
+  <a href="scheduler.html"><span class="glyphicon glyphicon-time"></span><br>Scheduler</a>
+  <a href="tracker.html"><span class="glyphicon glyphicon-fire"></span><br>Tracker</a>
+  <a href="health.html"><span class="glyphicon glyphicon-heart"></span><br>Health</a>
+</div>
+
+  </body>
+</html>
+<script src="home.js"> </script>
+
+<script>
+  var rowNum,table = document.getElementById("table");
+function addRow()
+{
+    var newRow = table.insertRow(table.length),
+        cell1 = newRow.insertCell(0),
+        cell2 = newRow.insertCell(1),
+        cell3 = newRow.insertCell(2),
+        day = document.getElementById("day").value,
+        time = document.getElementById("time").value,
+        activity = document.getElementById("activity").value;
+
+    cell1.innerHTML = day;
+    cell2.innerHTML = time;
+    cell3.innerHTML = activity;
+    selectRow()
+
+}
+
+function selectRow(){
+  for(var i = 1; i < table.rows.length; i++)
+  {
+      table.rows[i].onclick = function()
+      {
+        rowNum = this.rowIndex;
+        document.getElementById("day").value = this.cells[0].innerHTML;
+        document.getElementById("time").value = this.cells[1].innerHTML;
+        document.getElementById("activity").value = this.cells[2].innerHTML;
+      };
+  }
+}
+selectRow()
+
+function deleteRow(){
+  table.deleteRow(rowNum);
+  document.getElementById("day").value = "";
+  document.getElementById("time").value = "";
+  document.getElementById("activity").value = "";
+}
+
+function editRow(){
+    day = document.getElementById("day").value,
+    time = document.getElementById("time").value,
+    activity = document.getElementById("activity").value;
+    table.rows[rowNum].cells[0].innerHTML = day;
+    table.rows[rowNum].cells[1].innerHTML = time;
+    table.rows[rowNum].cells[2].innerHTML = activity;
+}
+</script>

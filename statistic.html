@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My statistics</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+
+  body {
+  min-width: 450px;
+  zoom: 2;
+  font: 14pt;
+  background-color: #eee;
+}
+
+#chart {
+  min-width: 300px;
+  padding: 20px;
+  margin-left: 15px;
+
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+table {
+  width: 100%;
+  height: 350px;
+}
+
+.charttitle {
+  text-align: center;
+  margin-right: 200px;
+  background-color:lightblue;
+  color:white;
+}
+
+.bars td {
+  vertical-align: bottom;
+  background-color:lightblue;
+  color:white;
+}
+
+.bars div:hover {
+  opacity: 0.6;
+
+}
+
+.legend {
+  vertical-align: bottom;
+  padding-left: 20px;
+  border:1px solid;
+  text-align: left;
+}
+
+.legbox {
+  display: block;
+  clear: both;
+
+}
+
+.username {
+  margin: 5px;
+  color: #fff;
+  font-size: 77%;
+  padding: 5px;
+
+
+}
+
+button{
+margin:20px;
+}
+/* color for the chart */
+.satu {background: #16A085;}
+
+.dua {background: #2ECC71;}
+
+.tiga {background: #27AE60;}
+
+.empat {background: #3498DB;}
+
+.lima {background: #2980B9;}
+
+.enam {background: #9B59B6;}
+
+.tujuh {background: #8E44AD;}
+
+.delapan {background: #34495E;}
+
+.sembilan {background: #2C3E50;}
+
+.sepuluh {background: #22313f;}
+
+.sebelas {background: #F1C40F;}
+
+.duabelas {background: #F39C12;}
+
+  </style>
+</head>
+
+<body>
+  <h2>My Health Statistics</h2>
+  <div id="chart"></div>
+  <button onclick="previousPage()">Previous page</button>
+</body>
+</html>
+
+
+<script>
+
+//chart data
+console.log(sessionStorage.getItem('timetowork'));
+console.log(sessionStorage.getItem('timetoexercise'));
+console.log(sessionStorage.getItem('timetostudy'));
+console.log(sessionStorage.getItem('extra_hour'));
+
+var timetowork=sessionStorage.getItem('timetowork');
+var timetoexercise=sessionStorage.getItem('timetoexercise');
+var timetostudy=sessionStorage.getItem('timetostudy');
+var extra_hour=sessionStorage.getItem('extra_hour');
+
+var chartjson = {
+  "title": "My Health Charts",
+  "data": [{
+    "name": "Work",
+    "score": timetowork
+  }, {
+    "name": "Exercise",
+    "score": timetoexercise
+  }, {
+    "name": "Study",
+    "score": timetostudy
+  }, {
+    "name": "Leisure",
+    "score": extra_hour
+  }],
+  "xtitle": "Hours",
+  "ytitle": "Works",
+  "ymax": 100,
+  "ykey": 'score',
+  "xkey": "name",
+  "prefix": "%"
+}
+
+
+var colors = ['satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas', 'duabelas'];
+
+
+var TROW = 'tr',
+  TDATA = 'td';
+
+var chart = document.createElement('div');
+
+var barchart = document.createElement('table');
+
+var titlerow = document.createElement(TROW);
+
+var titledata = document.createElement(TDATA);
+
+titledata.setAttribute('colspan', chartjson.data.length + 1);
+titledata.setAttribute('class', 'charttitle');
+titledata.innerText = chartjson.title;
+titlerow.appendChild(titledata);
+barchart.appendChild(titlerow);
+chart.appendChild(barchart);
+
+
+var barrow = document.createElement(TROW);
+
+
+for (var i = 0; i < chartjson.data.length; i++) {
+  barrow.setAttribute('class', 'bars');
+  var prefix = chartjson.prefix || '';
+
+  var bardata = document.createElement(TDATA);
+  var bar = document.createElement('div');
+  bar.setAttribute('class', colors[i]);
+  bar.style.height = chartjson.data[i][chartjson.ykey] + prefix;
+  bardata.innerText = chartjson.data[i][chartjson.ykey] + prefix;
+  bardata.appendChild(bar);
+  barrow.appendChild(bardata);
+}
+
+
+var legendrow = document.createElement(TROW);
+var legend = document.createElement(TDATA);
+legend.setAttribute('class', 'legend');
+legend.setAttribute('colspan', chartjson.data.length);
+
+
+for (var i = 0; i < chartjson.data.length; i++) {
+  var legbox = document.createElement('span');
+  legbox.setAttribute('class', 'legbox');
+  var barname = document.createElement('span');
+  barname.setAttribute('class', colors[i] + ' username');
+  var bartext = document.createElement('span');
+  bartext.innerText = chartjson.data[i][chartjson.xkey];
+  legbox.appendChild(barname);
+  legbox.appendChild(bartext);
+  legend.appendChild(legbox);
+}
+barrow.appendChild(legend);
+barchart.appendChild(barrow);
+barchart.appendChild(legendrow);
+chart.appendChild(barchart);
+document.getElementById('chart').innerHTML = chart.outerHTML;
+
+function previousPage()
+  {
+  window.history.back()
+  }
+;
+</script>

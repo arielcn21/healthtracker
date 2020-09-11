@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Home Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scaleable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<div class="logo">
+<a href="homepage.html"><Img src="logo.png" alt="healthtracker"></a>
+</div>
+
+<div class="pagesection">
+
+
+    <div class="nav">
+        <center><p>Home Page</p></center>
+        <div class="containers">
+      <div class="card">
+        <span><form class="searchbar" action="#" style="margin:auto;max-width:500px"><form></span>
+    			<div>
+    				<span>
+    					<span></span>
+    				</span>
+    			</div>
+    			<input autofocus placeholder="search" type="text" name="search" autocomplete="off" id="search" />
+    			<button type="submit" onClick="#"><i class="fa fa-search"></i></button>
+      </div>
+    	<ul class="list-group" id="list"></ul>
+    </div>
+    </div>
+
+</div>
+
+<div class="bodypage">
+  <main>
+  <section>
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="running.png" style="width:100%">
+      <div class="text">Running</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="biking.png" style="width:100%">
+      <div class="text">Biking</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="swimming.jpg" style="width:100%">
+      <div class="text">Swimming</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="martial.jpg" style="width:100%">
+      <div class="text">Martial Arts</div>
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+</section>
+<aside>
+  <div class="areainfo">
+    <div class="cardx">
+      <div class="image1">
+      <img src="nutrition.jpg" max-width=100%>
+      </div>
+      <div class="containerx">
+        <h3> Food Nutrition </h3>
+        <button type="button" class="collaps">Click Here</button>
+        <div class="content">
+          <p> 1. Egg <br>
+              2. Chicken Breast <br>
+              3. Milk <br>
+              4. Yoghurt
+          </p>
+          </div>
+        </div>
+      </div>
+</div>
+</aside>
+
+
+</main>
+<div class="faqpage">
+<a href="faq.html">FAQ</a>
+</div>
+
+</div>
+
+<div class="nav_sys">
+  <a href="homepage.html"><span class="glyphicon glyphicon-home"></span><br>Home</a>
+  <a href="scheduler.html"><span class="glyphicon glyphicon-time"></span><br>Scheduler</a>
+  <a href="tracker.html"><span class="glyphicon glyphicon-fire"></span><br>Tracker</a>
+  <a href="health.html"><span class="glyphicon glyphicon-heart"></span><br>Health</a>
+</div>
+
+  </body>
+
+
+</html>
+
+<script src="home.js">
+
+</script>
