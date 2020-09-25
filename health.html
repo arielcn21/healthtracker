@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body class="card">
+  <body class="card" style="background-color:#eee;">
 
 <div class="logo">
 <a href="homepage.html"><Img src="logo.png" alt="healthtracker"></a>
@@ -25,12 +25,14 @@
   <br>
   <br>
   <form action="/action_page.php">
+  <center> <b>
   Work:
   <input id="worktime"type="time" name="user_time" value=""/>
   <label>End Time</label>
   <input id="workendtime" type="time" name="user_time" value="" class="end"/> &nbsp &nbsp &nbsp
   <input id="workdifference" class="calculate" type="text" value=""/>
   <button id="cal_work">Calculate</button>
+  <br>
   <br>
   Exercise:
   <input id="exercisetime" type="time" name="user_time" value="" />
@@ -39,6 +41,7 @@
   <input id="exercisedifference"  class="calculate" type="text" value=""/>
   <button id="cal_exercise">Calculate</button>
   <br>
+  <br>
   Study:
   <input id= "studytime" type="time" name="user_time" value=""/>
   <label>End Time</label>
@@ -46,25 +49,29 @@
   <input id="studydifference" class="calculate" type="text" value=""/>
   <button id="cal_study">Calculate</button>
   <br>
+  <br>
   Leisure:
   <input id= "extratime" type="time" name="user_time" value=""/>
   <label>End Time</label>
   <input id="extraendtime" type="time" name="user_time" value="" class="end"/>&nbsp&nbsp
   <input id="extradifference" class="calculate" type="text" value=""/>
   <button id="cal_extra">Calculate</button>
+
 </form>
 <p style="margin-left:10px;">
  <b>according to my activities </b>
   <div class="faqpage1">
   <a href="statistic.html">Check my statistics</a>
   </div>
+  </b> </center>
 <div class="faqpage">
 <a href="faq.html">FAQ</a>
 </div>
 
 </p>
+<br>
 </div>
-
+<br>
 <div class="nav_sys">
   <a href="homepage.html"><span class="glyphicon glyphicon-home"></span><br>Home</a>
   <a href="scheduler.html"><span class="glyphicon glyphicon-time"></span><br>Scheduler</a>

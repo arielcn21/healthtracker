@@ -6,7 +6,7 @@ img {
   margin-right: 5px;
 	}
 
-=
+
 
 .logo{
   text-align: right;
@@ -600,7 +600,9 @@ section .slideshow-container{
 .maintable{
   margin-left:20px;
   margin-bottom: 10px;
+  margin-left: 650px;
 }
+
 
 .inputable tr{
   margin-left: 10px;
@@ -678,7 +680,7 @@ color:white;
 }
 
 .healthm{
-  background-color: #eee;
+  background-color: #ffc966;
 }
 
 @media only screen and (max-width: 750px) {

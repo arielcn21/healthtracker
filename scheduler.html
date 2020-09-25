@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   </head>
-  <body style="background-color:#eee;">
+  <body style="background-color:#ffc966;">
 
 <div class="logo">
 <a href="homepage.html"><Img src="logo.png"></a>
@@ -22,7 +22,7 @@
 
 <div class="pagesection">
 
-  <center><h1>Enter Your Schedule</h1></center>
+  <center><h1 style="font-weight:bold;">Enter Your Schedule</h1></center>
 
   <table class="maintable" id="table">
     <tr>
@@ -48,12 +48,12 @@
   </table>
 
   <div class="inputtable">
-    Day : <input type="text" name="day" id="day">
+  <center>  Day : <input type="text" name="day" id="day">
     Time :<input type="time" name="time" id="time" />
-    Activity :<input type="text" name="activity" id="activity">
-    <button onclick="addRow();">Add</button>
+    Activity :<input type="text" name="activity" id="activity"></center>
+    <center><button onclick="addRow();">Add</button>
     <button onclick="deleteRow();">Delete</button>
-    <button onclick="editRow();">Edit</button>
+    <button onclick="editRow();">Edit</button></center>
   </div>
 
   <div class="faqpage">
