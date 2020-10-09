@@ -48,6 +48,7 @@ form.searchbar input[type=text] {
   float: left;
   width: 70%;
   background: #f1f1f1;
+  margin-left: 10px;
 }
 
 form.searchbar button {
@@ -696,7 +697,7 @@ color:white;
 }
 
 .healthstatistic{
-  
+
   padding: 5px;
 
 }
