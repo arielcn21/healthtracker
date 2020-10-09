@@ -8,70 +8,74 @@
     <meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
     <link rel="stylesheet" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scaleable=no">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-  <body class="card" style="background-color:#eee;">
+  <body>
 
 <div class="logo">
 <a href="homepage.html"><Img src="logo.png" alt="healthtracker"></a>
 </div>
-<div class="healthm">
 
 
+<div class="nav">
   <center><h2>My Health Statistics</h2></center>
-  <br>
-  <br>
+</div>
+  <div class="healthbody">
   <form action="/action_page.php">
-  <center> <b>
-  Work:
+  <div class="healthstatistic">
+<div class="work">
+  <label>Work:</label>
   <input id="worktime"type="time" name="user_time" value=""/>
   <label>End Time</label>
-  <input id="workendtime" type="time" name="user_time" value="" class="end"/> &nbsp &nbsp &nbsp
+  <input id="workendtime" type="time" name="user_time" value="" class="end"/>
   <input id="workdifference" class="calculate" type="text" value=""/>
   <button id="cal_work">Calculate</button>
-  <br>
-  <br>
-  Exercise:
+</div>
+<div class="work">
+  <caption> Exercise: </caption>
   <input id="exercisetime" type="time" name="user_time" value="" />
   <label>End Time</label>
   <input id="exerciseendtime" type="time" name="user_time" value="" class="end"/>
   <input id="exercisedifference"  class="calculate" type="text" value=""/>
   <button id="cal_exercise">Calculate</button>
-  <br>
-  <br>
-  Study:
+</div>
+<div class="work">
+  <label>Study:</label>
   <input id= "studytime" type="time" name="user_time" value=""/>
   <label>End Time</label>
-  <input id="studyendtime" type="time" name="user_time" value="" class="end"/>&nbsp&nbsp&nbsp &nbsp
+  <input id="studyendtime" type="time" name="user_time" value="" class="end"/>
   <input id="studydifference" class="calculate" type="text" value=""/>
   <button id="cal_study">Calculate</button>
-  <br>
-  <br>
-  Leisure:
+</div>
+<div class="work">
+  <label>Leisure:</label>
   <input id= "extratime" type="time" name="user_time" value=""/>
   <label>End Time</label>
-  <input id="extraendtime" type="time" name="user_time" value="" class="end"/>&nbsp&nbsp
+  <input id="extraendtime" type="time" name="user_time" value="" class="end"/>
   <input id="extradifference" class="calculate" type="text" value=""/>
   <button id="cal_extra">Calculate</button>
+</div>
 
+</div>
 </form>
+<center>
 <p style="margin-left:10px;">
  <b>according to my activities </b>
+
   <div class="faqpage1">
   <a href="statistic.html">Check my statistics</a>
   </div>
-  </b> </center>
+</center>
 <div class="faqpage">
 <a href="faq.html">FAQ</a>
 </div>
-
-</p>
-<br>
 </div>
-<br>
+</p>
+
+
+
 <div class="nav_sys">
   <a href="homepage.html"><span class="glyphicon glyphicon-home"></span><br>Home</a>
   <a href="scheduler.html"><span class="glyphicon glyphicon-time"></span><br>Scheduler</a>
