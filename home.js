@@ -64,7 +64,15 @@ document.body.style.backgroundColor = "white";
 }
 
 
+/* Tracker */
+function calculateCaloriesBurned() {
+  var bw = document.getElementById('bodyWeight').value;
+  var cals = (4 * 3.5 * bw)/200;
+  document.getElementById('caloriesBurned').value = cals;
+}
 
-/* scheduler */
-
-/* activity */
+function stepCaloriesBurned() {
+  var st = document.getElementById('stepx').value;
+  var cals = (10 * st)/200;
+  document.getElementById('caloriesBurnedx').value = cals;
+}
