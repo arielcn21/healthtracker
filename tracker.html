@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -8,10 +8,11 @@
     <meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
     <link rel="stylesheet" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scaleable=no">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
   </head>
   <body>
 
@@ -32,7 +33,7 @@
     					<span></span>
     				</span>
     			</div>
-    			<input autofocus placeholder="search" type="text" name="search" autocomplete="off" id="search" />
+    			<input placeholder="search" type="text" name="search" id="search" />
     			<button type="submit" onClick="#"><i class="fa fa-search"></i></button>
       </div>
     	<ul class="list-group" id="list"></ul>
@@ -44,14 +45,14 @@
 <div class="bodypage">
   <h3> Calories Tracker </h3>
 
-  <i style="font-size:24px" class="fa">&#xf183;</i>&nbsp &nbsp<input type="text" id="bodyWeight" value="" placeholder="Body weight in Kg.">
-  <button onclick="calculateCaloriesBurned()" id="caloriex"> Calculate</button>
-  <input type="text" id="caloriesBurned" value="" > Calories burned per minute
+  <i style="font-size:24px" class="fa">&#xf183;</i>&nbsp &nbsp<input type="number" id="bodyWeight" value="" placeholder="Body weight in Kg.">
+  <input type="button" onclick="calculateCaloriesBurned();" value="calculate" id="caloriex" />
+  <input type="text" id="caloriesBurned" value="" readonly> Calories burned per minute
 
   <div class="calorie1">
   <i style="font-size:24px" class="fa">&#xf29d;</i>&nbsp <input type="text" id="stepx" value="" placeholder="Enter Steps.">
-  <button onclick="stepCaloriesBurned()" id="caloriex"> Calculate</button>
-    <input type="text" id="caloriesBurnedx" value=""> Calories burned.
+  <input type="button" onclick="stepCaloriesBurned();" value="calculate" id="caloriex" />
+    <input type="text" id="caloriesBurnedx" value="" readonly> Calories burned.
   </div>
 
 <div class="faqpage">
