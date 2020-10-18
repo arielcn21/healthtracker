@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
 
@@ -8,11 +8,10 @@
     <meta name="keywords" content="HTML,CSS,XML, charset=utf-8">
     <link rel="stylesheet" href="style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0, minimum scale=1.0, user-scaleable=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -33,7 +32,7 @@
     					<span></span>
     				</span>
     			</div>
-    			<input placeholder="search" type="text" name="search" id="search" />
+    			<input autofocus placeholder="search" type="text" name="search" autocomplete="off" id="search" />
     			<button type="submit" onClick="#"><i class="fa fa-search"></i></button>
       </div>
     	<ul class="list-group" id="list"></ul>
@@ -43,18 +42,67 @@
 </div>
 
 <div class="bodypage">
-  <h3> Calories Tracker </h3>
+  <main>
+  <section>
+    <h3> Calories Tracker </h3>
 
-  <i style="font-size:24px" class="fa">&#xf183;</i>&nbsp &nbsp<input type="number" id="bodyWeight" value="" placeholder="Body weight in Kg.">
-  <input type="button" onclick="calculateCaloriesBurned();" value="calculate" id="caloriex" />
-  <input type="text" id="caloriesBurned" value="" readonly> Calories burned per minute
 
-  <div class="calorie1">
-  <i style="font-size:24px" class="fa">&#xf29d;</i>&nbsp <input type="text" id="stepx" value="" placeholder="Enter Steps.">
-  <input type="button" onclick="stepCaloriesBurned();" value="calculate" id="caloriex" />
-    <input type="text" id="caloriesBurnedx" value="" readonly> Calories burned.
-  </div>
+    <i style="font-size:24px" class="fa">&#xf183;</i>&nbsp &nbsp<input type="number" id="bodyWeight" value="" placeholder="Body weight in Kg.">
+    <input type="button" onclick="calculateCaloriesBurned();" value="calculate" id="caloriex" />
+    <input type="text" id="caloriesBurned" value="" readonly> Calories burned per minute
 
+    <div class="calorie1">
+    <i style="font-size:24px" class="fa">&#xf29d;</i>&nbsp <input type="text" id="stepx" value="" placeholder="Enter Steps.">
+    <input type="button" onclick="stepCaloriesBurned();" value="calculate" id="caloriex" />
+      <input type="text" id="caloriesBurnedx" value="" readonly> Calories burned.
+    </div>
+</section>
+<aside>
+  <div class="areainfo">
+    <div class="cardx">
+      <div class="image1">
+      <img src="diet.jpg" max-width=100%>
+      </div>
+      <div class="containerx">
+        <h3> Diet Routine</h3>
+        <input type="button" onclick="document.getElementById('idlogin').style.display='block'" value="Click Here" style="width:100px; background-color:lightgreen; margin-bottom:10px;padding:10px;">
+
+        <div id="idlogin" class="login">
+
+          <form class="modal-content animate" action="homepage.html" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('idlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            </div>
+
+
+
+            <div class="container" style="background-color:#f1f1f1">
+                <h3> Welcome to Diet Routine </h3>
+              <h5>  10 weight loss tips </h5>
+              <p>Here are 10 more tips to lose weight faster: </p>
+
+<p>1. <b>Eat a high protein breakfast.</b> Eating a high protein breakfast could reduce cravings and calorie intake throughout the day (16Trusted Source, 17Trusted Source).<br>
+2. <b>Avoid sugary drinks and fruit juice.</b> These are among the most fattening things you can put into your body (18Trusted Source, 19).<br>
+3. <b>Drink water before meals.</b> One study showed that drinking water a half hour before meals increased weight loss by 44% over 3 months (20Trusted Source).<br>
+4. <b>Choose weight-loss-friendly foods.</b> Some foods are better for weight loss than others. Here is a list of 20 healthy weight-loss-friendly foods.<br>
+5. <b>Eat soluble fiber.</b> Studies show that soluble fibers may promote weight loss. Fiber supplements like glucomannan can also help (21Trusted Source, 22Trusted Source).<br>
+6. <b>Drink coffee or tea.</b> Caffeine boosts your metabolism by 3–11% (23Trusted Source, 24Trusted Source, 25Trusted Source).<br>
+7. <b>Base your diet on whole foods.</b> They are healthier, more filling, and much less likely to cause overeating than processed foods.<br>
+8. <b>Eat slowly.</b> Eating quickly can lead to weight gain over time, while eating slowly makes you feel more full and boosts weight-reducing hormones (26, 27Trusted Source).<br>
+9. <b>Weigh yourself every day.</b> Studies show that people who weigh themselves every day are much more likely to lose weight and keep it off for a long time (28Trusted Source, 29Trusted Source).<br>
+10. <b>Get good quality sleep.</b> Sleep is important for many reasons, and poor sleep is one of the biggest risk factors for weight gain (30).</p>
+
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+</div>
+</aside>
+
+
+</main>
 <div class="faqpage">
 <a href="faq.html">FAQ</a>
 </div>
