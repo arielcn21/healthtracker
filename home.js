@@ -63,8 +63,7 @@ document.getElementById("main").style.marginLeft= "0";
 document.body.style.backgroundColor = "white";
 }
 
-
-/* Tracker */
+/* tracker */
 function calculateCaloriesBurned() {
   var bw = document.getElementById('bodyWeight').value;
   var cals = (4 * 3.5 * bw)/200;
@@ -73,6 +72,6 @@ function calculateCaloriesBurned() {
 
 function stepCaloriesBurned() {
   var st = document.getElementById('stepx').value;
-  var cals = (10 * st)/200;
-  document.getElementById('caloriesBurnedx').value = cals;
+  var calx = (10 * st)/200;
+  document.getElementById('caloriesBurnedx').value = calx;
 }
